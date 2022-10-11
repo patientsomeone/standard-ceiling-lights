@@ -22,7 +22,7 @@
         </graphicData>
         <statBases>
             <WorkToBuild>375</WorkToBuild>
-            <Mass>3.5</Mass>
+            <Mass>4</Mass>
             <Flammability>0</Flammability>
         </statBases>
         <researchPrerequisites>
@@ -57,7 +57,7 @@
             </li>
             <li Class="CompProperties_Flickable"/>
             <li Class="Merthsoft.AutoOnAutoOff.CompProperties.ProximityPower">
-                <checkRate>100</checkRate>
+                <checkRate>250</checkRate>
                 <autoOn>true</autoOn>
                 <autoOff>true</autoOff>
                 <showOverrideButton>true</showOverrideButton>
@@ -65,50 +65,6 @@
         </comps>
         <costList>
             <Steel>15</Steel>
-        </costList>
-    </ThingDef>
-    <ThingDef ParentName="Visible_Ceiling_Lamp_Base">
-        <defName>LargeVisibleCeilingLight</defName>
-        <label>Large Ceiling Lamp</label>
-        <description>A large hanging lamp used to light an area. Leaves the ground free for your stockpiles and work benches!</description>
-        <graphicData>
-            <texPath>large-ceiling-light</texPath>
-            <graphicClass>Graphic_Multi</graphicClass>
-            <drawSize>(2,1)</drawSize>
-            <damageData>
-				<cornerTL>Damage/Corner</cornerTL>
-				<cornerTR>Damage/Corner</cornerTR>
-				<cornerBL>Damage/Corner</cornerBL>
-				<cornerBR>Damage/Corner</cornerBR>
-			</damageData>
-        </graphicData>
-        <statBases>
-            <Mass>4.5</Mass>
-        </statBases>
-        <size>(2,1)</size>
-        <defaultPlacingRot>South</defaultPlacingRot>
-        <rotatable>true</rotatable>
-        <uiIconPath>ui_large-standard-ceiling-light</uiIconPath>
-                <comps>
-            <li Class="CompProperties_Glower">
-                <glowRadius>12</glowRadius>
-                <glowColor>(217,217,208,0)</glowColor>
-            </li>
-            <li Class="CompProperties_Power">
-                <compClass>CompPowerTrader</compClass>
-                <shortCircuitInRain>true</shortCircuitInRain>
-                <basePowerConsumption>20</basePowerConsumption>
-            </li>
-            <li Class="CompProperties_Flickable"/>
-            <li Class="Merthsoft.AutoOnAutoOff.CompProperties.ProximityPower">
-                <checkRate>100</checkRate>
-                <autoOn>true</autoOn>
-                <autoOff>true</autoOff>
-                <showOverrideButton>true</showOverrideButton>
-            </li>
-        </comps>
-        <costList>
-            <Steel>20</Steel>
         </costList>
     </ThingDef>
     <ThingDef ParentName="Visible_Ceiling_Lamp_Base">
