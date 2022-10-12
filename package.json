@@ -1,0 +1,21 @@
+{
+    "name": "standard-ceiling-lights",
+    "version": "1.0.0",
+    "description": "Ceiling Lights Rimworld Mod",
+    "main": "index.js",
+    "scripts": {
+        "build": "bash ./bin/cloneVersions.sh './Source/xml/Defs' 'v1.1' 'v1.2' 'v1.3' 'v1.4'",
+        "reset": "bash ./bin/resetEnv.sh false './mod/v*/'",
+        "fullBuild": "npm run reset && npm run build"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+ssh://git@gitlab.com/robinsolutions/standard-ceiling-lights.git"
+    },
+    "author": "Joshua Robinson",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://gitlab.com/robinsolutions/standard-ceiling-lights/issues"
+    },
+    "homepage": "https://gitlab.com/robinsolutions/standard-ceiling-lights#readme"
+}

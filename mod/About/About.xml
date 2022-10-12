@@ -5,7 +5,10 @@
 	<author>PatientSomeone</author>
 	<!-- <url></url> -->
 	<supportedVersions>
-		<li> 1.1 </li>
+		<li>v1.1</li>
+		<li>v1.2</li>
+		<li>v1.3</li>
+		<li>v1.4</li>
 	</supportedVersions>
 	<packageId>PatientSomeone.VisibleCeilingLights</packageId>
 	<description>
@@ -13,13 +16,16 @@
 Now your colonists can mount a lamp to the ceiling, freeing up valuable real estate on the floor! It is capable of floating on it's own; however, it is likely to short circuit in the rain.
 
 	Packaging Includes:
-	* One Standard Ceiling Lamp
-	* One Large Ceiling Lamp
+	* One Standard Ceiling Lamp (1x1)
+	* One Large Ceiling Lamp (2x1)
+	* One Extra Large Ceiling Lamp (2x2)
 	* One UV Ceiling Lamp
 
 The Ceiling Lamp invented on the Rim is slightly more efficient than the Standing Lamp, due to the smaller nature of the Ceiling lamp, less steel (15 compared to Vanilla 20) is used in it's creation. The method of directing light has also reduced power consumption (20 compared to Vanilla 30). Unfortunately these efficiencies come at a cost to build time. Due to the small and complex nature of the Ceiling light, it will take slightly longer to build than a Standing Lamp.
 
-The Large (1x2) ceiling lamp requires more steel (20) than the standard ceiling lamp due to it's larger size, matching the steel required for a Standing Lamp; however, the efficiencies in light focusing remain, keeping the power consumption reduced (20 compared to Vanilla 30);
+The Large (1x2) ceiling lamp requires more steel (20) than the standard ceiling lamp due to it's larger size, matching the steel required for a Standing Lamp; however, the efficiencies in light focusing remain, keeping the power consumption reduced (20 compared to Vanilla 30).
+
+While the Extra Large ceiling lamp requires a bit more steal () than the large version, and more power (30) than the both the large version, it's efficiencies are shown in the increase light output.
 
 Similarly, the UV Ceiling Lamp uses significantly less power (1000 compared to Vanilla 2900), and steel (35 compared to Vanilla 40); however, it takes significantly longer to build.
 
