@@ -54,7 +54,8 @@ createFolder() {
 # Copy from Source
 copyMod() {
     echo Deploying to $version
-    cp $source $version -r & working
+    echo Deploying from $version
+    cp -r $source "./mod/$version" & working
     wait
 }
 
@@ -79,7 +80,7 @@ checkSource() {
         echo Source $source exists, proceeding with copy;
         validSource=true
     else 
-        echo Source $source does not exist, exiting;
+        # echo Source $source does not exist, exiting;
         validSource=false
     fi
 }
@@ -90,7 +91,7 @@ execute() {
 
     if [ $validSource = true ]
     then
-        echo $source is valid, executing Loop;
+        # echo $source is valid, executing Loop;
         versionLoop;
     else
         echo $source does not exist, exiting

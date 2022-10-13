@@ -1,5 +1,5 @@
 #!/bin/sh
-. ~/.nvm/nvm.sh
+# . ~/.nvm/nvm.sh
 
 # The following shims should not be required, but leaving commented in case requirements arise
 # . ~/.profile
