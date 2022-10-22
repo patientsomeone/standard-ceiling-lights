@@ -21,9 +21,6 @@ cursorReset() {
 }
 working() {
     pid=$!
-
-    # spin="-\|/"
-    # spin="▁▂▃▄▅▆▇█▇▆▅▄▃▂▁"
     spin="▖▘▝▗"
 
     state=0

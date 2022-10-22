@@ -1,4 +1,11 @@
 <Defs>
+    <DesignatorDropdownGroupDef>
+		<defName>VisibleCeilingLamps</defName> 
+	</DesignatorDropdownGroupDef>
+    <DesignatorDropdownGroupDef>
+		<defName>UvCeilingLamps</defName> 
+	</DesignatorDropdownGroupDef>
+
     <ThingDef Name="Visible_Ceiling_Lamp_Base" ParentName="LampBase" Abstract="True">
         <defName>VisibleCeilingLamp_Base</defName>
         <label>Standard Ceiling Light Base Definition.</label>
@@ -17,9 +24,10 @@
         </building>
         <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
         <graphicData>
-            <color>(1.0,1.0,1.0,0.7)</color>
+            <color>(1.0,1.0,1.0,0.5)</color>
             <shaderType>Transparent</shaderType>
         </graphicData>
+        <thingCategories Inherit="True" />
         <statBases>
             <WorkToBuild>375</WorkToBuild>
             <Mass>3.5</Mass>
@@ -37,15 +45,17 @@
         <constructEffect>ConstructMetal</constructEffect>
     </ThingDef>
 
-    <ThingDef ParentName="Visible_Ceiling_Lamp_Base">
+    <ThingDef Name="Visible_Ceiling_Light" ParentName="Visible_Ceiling_Lamp_Base">
         <defName>VisibleCeilingLight</defName>
         <label>Ceiling Lamp</label>
         <description>A hanging lamp used to light an area. Leaves the ground free for your stockpiles and work benches!</description>
+        <designatorDropdown>VisibleCeilingLamps</designatorDropdown>
         <graphicData>
-            <texPath>standard-ceiling-light</texPath>
+            <texPath>round-extra-large-ceiling-light</texPath>
+            <!-- <texPath>standard-ceiling-light</texPath> -->
         </graphicData>
         <uiIconPath>ui_standard-ceiling-light</uiIconPath>
-                <comps>
+        <comps>
             <li Class="CompProperties_Glower">
                 <glowRadius>12</glowRadius>
                 <glowColor>(217,217,208,0)</glowColor>
@@ -56,21 +66,34 @@
                 <basePowerConsumption>20</basePowerConsumption>
             </li>
             <li Class="CompProperties_Flickable"/>
-            <!-- <li Class="Merthsoft.AutoOnAutoOff.CompProperties.ProximityPower">
+            <li MayRequire="Merthsoft.AutoLightSwitch" Class="Merthsoft.AutoOnAutoOff.CompProperties.ProximityPower">
                 <checkRate>100</checkRate>
                 <autoOn>true</autoOn>
                 <autoOff>true</autoOff>
                 <showOverrideButton>true</showOverrideButton>
-            </li> -->
+            </li>
         </comps>
         <costList>
             <Steel>15</Steel>
         </costList>
     </ThingDef>
+
+    <ThingDef ParentName="Visible_Ceiling_Light">
+        <defName>SquareCeilingLight</defName>
+        <label>Square Ceiling Lamp</label>
+        <designatorDropdown>VisibleCeilingLamps</designatorDropdown>
+        <description>A square hanging lamp used to light an area. Leaves the ground free for your stockpiles and work benches!</description>
+        <uiIconPath>ui_square-ceiling-light</uiIconPath>
+        <graphicData>
+            <texPath>square-ceiling-light</texPath>
+        </graphicData>
+    </ThingDef>
+
     <ThingDef ParentName="Visible_Ceiling_Lamp_Base">
         <defName>LargeVisibleCeilingLight</defName>
         <label>Large Ceiling Lamp</label>
         <description>A large hanging lamp used to light an area. Leaves the ground free for your stockpiles and work benches!</description>
+        <designatorDropdown>VisibleCeilingLamps</designatorDropdown>
         <graphicData>
             <texPath>large-ceiling-light</texPath>
             <graphicClass>Graphic_Multi</graphicClass>
@@ -101,24 +124,25 @@
                 <basePowerConsumption>20</basePowerConsumption>
             </li>
             <li Class="CompProperties_Flickable"/>
-            <!-- <li Class="Merthsoft.AutoOnAutoOff.CompProperties.ProximityPower">
+            <li MayRequire="Merthsoft.AutoLightSwitch" Class="Merthsoft.AutoOnAutoOff.CompProperties.ProximityPower">
                 <checkRate>100</checkRate>
                 <autoOn>true</autoOn>
                 <autoOff>true</autoOff>
                 <showOverrideButton>true</showOverrideButton>
-            </li> -->
+            </li>
         </comps>
         <costList>
             <Steel>20</Steel>
         </costList>
     </ThingDef>
 
-    <ThingDef ParentName="Visible_Ceiling_Lamp_Base">
-        <defName>ExtraLargeVisibleCeilingLight</defName>
+    <ThingDef Name="Xl_Ceiling_Light" ParentName="Visible_Ceiling_Lamp_Base">
+        <defName>ExtraLargeCeilingLight</defName>
         <label>Extra Large Ceiling Lamp</label>
         <description>An extra large hanging lamp used to light an area. Leaves the ground free for your stockpiles and work benches!</description>
+        <designatorDropdown>VisibleCeilingLamps</designatorDropdown>
         <graphicData>
-            <texPath>extra-large-ceiling-light</texPath>
+            <texPath>round-extra-large-ceiling-light</texPath>
             <graphicClass>Graphic_Multi</graphicClass>
             <drawSize>(2,2)</drawSize>
             <damageData>
@@ -130,7 +154,7 @@
         </graphicData>
         <statBases>
             <Mass>5</Mass>
-            <WorkToBuild>450</WorkToBuild>
+            <WorkToBuild>500</WorkToBuild>
         </statBases>
         <size>(2,2)</size>
         <defaultPlacingRot>North</defaultPlacingRot>
@@ -147,22 +171,34 @@
                 <basePowerConsumption>30</basePowerConsumption>
             </li>
             <li Class="CompProperties_Flickable"/>
-            <!-- <li Class="Merthsoft.AutoOnAutoOff.CompProperties.ProximityPower">
+            <li MayRequire="Merthsoft.AutoLightSwitch" Class="Merthsoft.AutoOnAutoOff.CompProperties.ProximityPower">
                 <checkRate>100</checkRate>
                 <autoOn>true</autoOn>
                 <autoOff>true</autoOff>
                 <showOverrideButton>true</showOverrideButton>
-            </li> -->
+            </li>
         </comps>
         <costList>
             <Steel>30</Steel>
         </costList>
     </ThingDef>
 
-    <ThingDef ParentName="Visible_Ceiling_Lamp_Base">
+    <ThingDef ParentName="Xl_Ceiling_Light">
+        <defName>SquareExtraLargeCeilingLight</defName>
+        <label>XL Square Ceiling Lamp</label>
+        <description>A square extra large hanging lamp used to light an area. Leaves the ground free for your stockpiles and work benches!</description>
+        <designatorDropdown>VisibleCeilingLamps</designatorDropdown>
+        <graphicData>
+            <texPath>extra-large-ceiling-light</texPath>
+        </graphicData>
+        <uiIconPath>ui_square-xl-ceiling-light</uiIconPath>
+    </ThingDef>
+
+    <ThingDef Name="Uv_Ceiling_Light" ParentName="Visible_Ceiling_Lamp_Base">
         <defName>VisibleCeilingLight_UV</defName>
         <label>UV Ceiling Lamp</label>
         <description>A hanging UV Light, capable of growing plants. It is more efficient than a standard Sun Lamp and leaves the ground free for an additional plant; however, these efficiencies require additional effort to build.</description>
+        <designatorDropdown>UvCeilingLamps</designatorDropdown>
         <graphicData>
             <texPath>uv-ceiling-light</texPath>
         </graphicData>
@@ -197,5 +233,17 @@
         </comps>
         <specialDisplayRadius>5.8</specialDisplayRadius>
     </ThingDef>
+
+    <ThingDef ParentName="Uv_Ceiling_Light">
+        <defName>SquareUvCeilingLight</defName>
+        <label>Square UV Ceiling Lamp</label>
+        <description>A square hanging UV Light, capable of growing plants. It is more efficient than a standard Sun Lamp and leaves the ground free for an additional plant; however, these efficiencies require additional effort to build.</description>
+        <designatorDropdown>UvCeilingLamps</designatorDropdown>
+        <graphicData>
+            <texPath>uv-square-ceiling-light</texPath>
+        </graphicData>
+        <uiIconPath>ui_square-uv-ceiling-light</uiIconPath>
+    </ThingDef>
 </Defs>
+
 

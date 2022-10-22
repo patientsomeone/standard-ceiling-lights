@@ -124,7 +124,8 @@ deploy() {
 }
 
 reset() {
-    bash "./bin/resetEnv.sh" "false" "$deploymentPath/**"
+    rm -r "$deploymentPath/**" && echo Successfully cleaned deployment folder || echo failed to clean deployment folder
+    # bash "./bin/resetEnv.sh" "false" "$deploymentPath/**" && echo Successfully cleaned deployment folder || echo failed to clean deployment folder
 }
 
 shouldReset() {
@@ -144,7 +145,7 @@ pathChecker() {
 
 resetChecker() {
     # If 3rd argument is true, clean up the deployment folder
-    shouldReset && reset || echo Not instructed to reset Deployment path
+    shouldReset && reset
 }
 
 pathChecker && resetChecker && deploy && echo  && echo Successfully Deployed to $deploymentPath || (echo  && echo Failed to execute Deployment)
