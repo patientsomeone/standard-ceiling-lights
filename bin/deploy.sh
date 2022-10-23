@@ -124,7 +124,7 @@ deploy() {
 }
 
 reset() {
-    rm -r "$deploymentPath/**" && echo Successfully cleaned deployment folder || echo failed to clean deployment folder
+    rm -r "$deploymentPath" && echo Successfully cleaned deployment folder || echo failed to clean deployment folder
     # bash "./bin/resetEnv.sh" "false" "$deploymentPath/**" && echo Successfully cleaned deployment folder || echo failed to clean deployment folder
 }
 

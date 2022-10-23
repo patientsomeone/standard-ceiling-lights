@@ -1,15 +1,18 @@
 <Defs>
     <DesignatorDropdownGroupDef>
-		<defName>VisibleCeilingLamps</defName> 
+		<defName>Patient_VisibleCeilingLamps</defName> 
 	</DesignatorDropdownGroupDef>
     <DesignatorDropdownGroupDef>
-		<defName>UvCeilingLamps</defName> 
+		<defName>Patient_UvCeilingLamps</defName> 
 	</DesignatorDropdownGroupDef>
 
-    <ThingDef Name="Visible_Ceiling_Lamp_Base" ParentName="LampBase" Abstract="True">
-        <defName>VisibleCeilingLamp_Base</defName>
+    <ThingDef Name="Patient_Visible_Ceiling_Lamp_Base" ParentName="LampBase" Abstract="True">
+        <defName>Patient_VisibleCeilingLamp_Base</defName>
         <label>Standard Ceiling Light Base Definition.</label>
         <description>Help, I'm trapped in the coding factory! If you can read this, tell the mod author!</description>
+        <placeWorkers>
+            <li MayRequire="Owlchemist.CeilingUtilities">CeilingUtilities.PlaceWorker_OnlyUnderRoof</li>
+        </placeWorkers>
         <fillPercent>0</fillPercent>
         <passability>Standable</passability>
         <blockWind>false</blockWind>
@@ -45,14 +48,13 @@
         <constructEffect>ConstructMetal</constructEffect>
     </ThingDef>
 
-    <ThingDef Name="Visible_Ceiling_Light" ParentName="Visible_Ceiling_Lamp_Base">
-        <defName>VisibleCeilingLight</defName>
+    <ThingDef Name="Patient_Visible_Ceiling_Light" ParentName="Patient_Visible_Ceiling_Lamp_Base">
+        <defName>Patient_VisibleCeilingLight</defName>
         <label>Ceiling Lamp</label>
         <description>A hanging lamp used to light an area. Leaves the ground free for your stockpiles and work benches!</description>
-        <designatorDropdown>VisibleCeilingLamps</designatorDropdown>
+        <designatorDropdown>Patient_VisibleCeilingLamps</designatorDropdown>
         <graphicData>
             <texPath>round-extra-large-ceiling-light</texPath>
-            <!-- <texPath>standard-ceiling-light</texPath> -->
         </graphicData>
         <uiIconPath>ui_standard-ceiling-light</uiIconPath>
         <comps>
@@ -78,10 +80,10 @@
         </costList>
     </ThingDef>
 
-    <ThingDef ParentName="Visible_Ceiling_Light">
-        <defName>SquareCeilingLight</defName>
+    <ThingDef ParentName="Patient_Visible_Ceiling_Light">
+        <defName>Patient_SquareCeilingLight</defName>
         <label>Square Ceiling Lamp</label>
-        <designatorDropdown>VisibleCeilingLamps</designatorDropdown>
+        <designatorDropdown>Patient_VisibleCeilingLamps</designatorDropdown>
         <description>A square hanging lamp used to light an area. Leaves the ground free for your stockpiles and work benches!</description>
         <uiIconPath>ui_square-ceiling-light</uiIconPath>
         <graphicData>
@@ -89,11 +91,11 @@
         </graphicData>
     </ThingDef>
 
-    <ThingDef ParentName="Visible_Ceiling_Lamp_Base">
-        <defName>LargeVisibleCeilingLight</defName>
+    <ThingDef ParentName="Patient_Visible_Ceiling_Lamp_Base">
+        <defName>Patient_LargeVisibleCeilingLight</defName>
         <label>Large Ceiling Lamp</label>
         <description>A large hanging lamp used to light an area. Leaves the ground free for your stockpiles and work benches!</description>
-        <designatorDropdown>VisibleCeilingLamps</designatorDropdown>
+        <designatorDropdown>Patient_VisibleCeilingLamps</designatorDropdown>
         <graphicData>
             <texPath>large-ceiling-light</texPath>
             <graphicClass>Graphic_Multi</graphicClass>
@@ -136,11 +138,11 @@
         </costList>
     </ThingDef>
 
-    <ThingDef Name="Xl_Ceiling_Light" ParentName="Visible_Ceiling_Lamp_Base">
-        <defName>ExtraLargeCeilingLight</defName>
-        <label>Extra Large Ceiling Lamp</label>
+    <ThingDef Name="Patient_XL_Ceiling_Light" ParentName="Patient_Visible_Ceiling_Lamp_Base">
+        <defName>Patient_XLCeilingLight</defName>
+        <label>XL Ceiling Lamp</label>
         <description>An extra large hanging lamp used to light an area. Leaves the ground free for your stockpiles and work benches!</description>
-        <designatorDropdown>VisibleCeilingLamps</designatorDropdown>
+        <designatorDropdown>Patient_VisibleCeilingLamps</designatorDropdown>
         <graphicData>
             <texPath>round-extra-large-ceiling-light</texPath>
             <graphicClass>Graphic_Multi</graphicClass>
@@ -183,22 +185,22 @@
         </costList>
     </ThingDef>
 
-    <ThingDef ParentName="Xl_Ceiling_Light">
-        <defName>SquareExtraLargeCeilingLight</defName>
+    <ThingDef ParentName="Patient_XL_Ceiling_Light">
+        <defName>Patient_XlSquareCeilingLight</defName>
         <label>XL Square Ceiling Lamp</label>
         <description>A square extra large hanging lamp used to light an area. Leaves the ground free for your stockpiles and work benches!</description>
-        <designatorDropdown>VisibleCeilingLamps</designatorDropdown>
+        <designatorDropdown>Patient_VisibleCeilingLamps</designatorDropdown>
         <graphicData>
             <texPath>extra-large-ceiling-light</texPath>
         </graphicData>
         <uiIconPath>ui_square-xl-ceiling-light</uiIconPath>
     </ThingDef>
 
-    <ThingDef Name="Uv_Ceiling_Light" ParentName="Visible_Ceiling_Lamp_Base">
-        <defName>VisibleCeilingLight_UV</defName>
+    <ThingDef Name="Uv_Ceiling_Light" ParentName="Patient_Visible_Ceiling_Lamp_Base">
+        <defName>Patient_VisibleCeilingLight_UV</defName>
         <label>UV Ceiling Lamp</label>
         <description>A hanging UV Light, capable of growing plants. It is more efficient than a standard Sun Lamp and leaves the ground free for an additional plant; however, these efficiencies require additional effort to build.</description>
-        <designatorDropdown>UvCeilingLamps</designatorDropdown>
+        <designatorDropdown>Patient_UvCeilingLamps</designatorDropdown>
         <graphicData>
             <texPath>uv-ceiling-light</texPath>
         </graphicData>
@@ -235,10 +237,10 @@
     </ThingDef>
 
     <ThingDef ParentName="Uv_Ceiling_Light">
-        <defName>SquareUvCeilingLight</defName>
+        <defName>Patient_SquareUvCeilingLight</defName>
         <label>Square UV Ceiling Lamp</label>
         <description>A square hanging UV Light, capable of growing plants. It is more efficient than a standard Sun Lamp and leaves the ground free for an additional plant; however, these efficiencies require additional effort to build.</description>
-        <designatorDropdown>UvCeilingLamps</designatorDropdown>
+        <designatorDropdown>Patient_UvCeilingLamps</designatorDropdown>
         <graphicData>
             <texPath>uv-square-ceiling-light</texPath>
         </graphicData>

@@ -3,12 +3,17 @@
 	<name>Visible Ceiling Lamp</name>
 	<author>PatientSomeone</author>
 	<packageId>PatientSomeone.VisibleCeilingLights</packageId>
+	<url>https://github.com/patientsomeone/standard-ceiling-lights</url>
 	<supportedVersions>
 		<li>1.1</li>
 		<li>1.2</li>
 		<li>1.3</li>
 		<li>1.4</li>
 	</supportedVersions>
+	<loadAfter>
+		<li>Owlchemist.CeilingUtilities</li>
+		<li>Merthsoft.AutoLightSwitch</li>
+	</loadAfter>
 	<description>
 Now your colonists can mount a lamp to the ceiling, freeing up valuable real estate on the floor! It is capable of floating on it's own; however, it is likely to short circuit in the rain.
 
@@ -27,5 +32,7 @@ While the Extra Large ceiling lamp requires a bit more steal (30) than the large
 Similarly, the UV Ceiling Lamp uses significantly less power (1000 compared to Vanilla 2900), and steel (35 compared to Vanilla 40); however, it takes significantly longer to build.
 
 While some miracle of the Rim will allow these lamps to float idly in the middle of nowhere, this will leave their circuitry unprotected! Warranty is voided if used in rain!
+
+Massive thanks to OwlChemist for helping me wrap these into the Simple Utilities: Ceiling mod! 
 	</description>
 </ModMetaData>

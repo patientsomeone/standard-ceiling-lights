@@ -4,7 +4,7 @@
     "description": "Ceiling Lights Rimworld Mod",
     "main": "index.js",
     "scripts": {
-        "deploy": "bash ./bin/testMod.sh './mod' 'D:\\Games\\Steam\\steamapps\\common\\RimWorld\\Mods\\Visible Ceiling Lamp' 'false'"
+        "deploy": "bash ./bin/deploy.sh './mod' 'D:\\Games\\Steam\\steamapps\\common\\RimWorld\\Mods\\Visible Ceiling Lamp' 'true'"
     },
     "repository": {
         "type": "git",

@@ -21,6 +21,7 @@ Similarly, the UV Ceiling Lamp uses significantly less power (1000 compared to V
 
 While some miracle of the Rim will allow these lamps to float idly in the middle of nowhere, this will leave their circuitry unprotected! Warranty is voided if used in rain!
 
+Massive thanks to OwlChemist for helping me wrap these into the Simple Utilities: Ceiling mod! 
 
 Note:
 Ceiling Lights can no longer be automatically flicked until we burn the bugs out of the housing.
