@@ -6,10 +6,16 @@
 Now your colonists can mount a lamp to the ceiling, freeing up valuable real estate on the floor! It is capable of floating on it's own; however, it is likely to short circuit in the rain.
 
 	Packaging Includes:
-	* One Standard Ceiling Lamp (1x1)
+	* Two Standard Ceiling Lamps (1x1)
+		* Round
+		* (NEW) Square
 	* One Large Ceiling Lamp (2x1)
-	* (NEW) One Extra Large Ceiling Lamp (2x2)
-	* One UV Ceiling Lamp
+	* (NEW) Two Extra Large Ceiling Lamps (2x2)
+		* Round
+		* Square
+	* Two UV Ceiling lamps
+		* Round
+		* (NEW) Square
 
 The Ceiling Lamp invented on the Rim is slightly more efficient than the Standing Lamp, due to the smaller nature of the Ceiling lamp, less steel (15 compared to Vanilla 20) is used in it's creation. The method of directing light has also reduced power consumption (20 compared to Vanilla 30). Unfortunately these efficiencies come at a cost to build time. Due to the small and complex nature of the Ceiling light, it will take slightly longer to build than a Standing Lamp.
 
@@ -20,6 +26,7 @@ While the Extra Large ceiling lamp requires a bit more steal (30) than the large
 Similarly, the UV Ceiling Lamp uses significantly less power (1000 compared to Vanilla 2900), and steel (35 compared to Vanilla 40); however, it takes significantly longer to build.
 
 While some miracle of the Rim will allow these lamps to float idly in the middle of nowhere, this will leave their circuitry unprotected! Warranty is voided if used in rain!
+[bold] If Simple Utilities: Ceiling (https://steamcommunity.com/sharedfiles/filedetails/?id=2571003732) is installed, Ceiling lights will only be available under a roof [bold]
 
 Massive thanks to OwlChemist for helping me wrap these into the Simple Utilities: Ceiling mod! 
 
