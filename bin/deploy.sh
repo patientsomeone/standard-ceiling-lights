@@ -66,49 +66,25 @@ checkPaths() {
     pathsToCheck=("$sourcePath" "$deploymentPath")
 
     echArr=()
-    # echo echArr length ${#echArr[@]}
     echo pathsToCheck ${pathsToCheck[@]}
 
-    # for ((i = 0; i < ${#pathsToCheck[@]}; i++))
-    # do
-    #     pathToValidate="${pathsToCheck[$i]}"
+    pathToValidate="${pathsToCheck[0]}"
+    exists
+    wait
 
-    #     echo toCheck "${pathsToCheck[$i]}"
-
-    #     echo checking $pathToValidate
-
-    #     exists
-    #     wait
-
-    #     if [ $validPath != true ]
-    #     then
-    #         echArr=(${echArr[@]} $pathToValidate)
-    #     fi
-    # done
-
-    for pathToValidate in "${pathsToCheck[@]}"
-    do
-        exists
-        wait
-
-        if [ $validPath != true ]
-        then
-            echArr=(${echArr[@]} $pathToValidate)
-        fi
-    done
-
-    # echo echArr length ${#echArr[@]}
-
-    if [ ${#echArr[@]} -gt 0 ]
+    if [ $validPath != true ]
     then
-        echo  
-        echo  
-        echo The following paths did not exist
-        # echo ${echArr[@]}
-        echoArray
-        echo  
-        echo  
-        echo Unable to complete
+        echo Creating directory $pathToValidate
+        echArr=(${echArr[@]} $pathToValidate)
+    fi
+
+    pathToValidate="${pathsToCheck[1]}"
+    exists
+    wait
+
+    if [ $validPath != true ]
+    then
+        mkdir pathToValidate
     fi
 
     return ${#echArr[@]}
